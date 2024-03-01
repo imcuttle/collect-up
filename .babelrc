@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": ">=10",
+          "browsers": ["defaults"]
+        },
+        "exclude": ["transform-regenerator"],
+        "loose": true,
+        "modules": "commonjs"
+      }
+    ]
+  ],
+  "plugins": ["@babel/proposal-class-properties"],
+  "env": {
+    "es": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "exclude": ["transform-regenerator"],
+            "loose": true,
+            "modules": false
+          }
+        ]
+      ]
+    }
+  }
+}
